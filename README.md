@@ -4,14 +4,18 @@ Reference :[Fast Approximate Nearest Neighbor Search With TheNavigating Spreadin
 
 # Introduction
 
-In reference, the author proposes a new graph structure called the Monotonic Relative Neighborhood Graph (MRNG), which guarantees a low average search time complexity. The author also introduces the Navigating Spreading-out Graph (NSG), which serves as an effective approximation of MRNG.
+The author introduces a novel graph structure, the Monotonic Relative Neighborhood Graph (MRNG), which is designed to achieve low average search time complexity, making it well-suited for efficient approximate nearest neighbor search (ANNS) in high-dimensional data spaces. To address the practical challenges of MRNG construction, the author also presents the Navigating Spreading-out Graph (NSG), a simplified and efficient approximation of MRNG.
+
+NSG is particularly useful in scenarios requiring fast and accurate nearest neighbor queries. For example, in **image retrieval**, it enables the rapid search of similar images from large-scale datasets. This is particularly valuable in applications like photo management or criminal investigations, where a user uploads an image, and NSG quickly identifies images with similar content or style, such as locating other photos of similar landscapes.
+
+In **natural language processing (NLP)**, NSG excels at finding semantically similar sentences or documents within a text embedding space. For instance, search engines can leverage NSG to process user queries by quickly identifying the most relevant articles or web pages based on semantic similarity, enabling faster and more accurate retrieval of information.
 
 The NSG offers several advantages:
 
-- low out-degree
-- shorter search paths
-- low construction time
-- comprehensive theoretical analysis
+- Low Out-degree
+- Shorter Search Paths
+- Low Construction Time
+- Comprehensive Theoretical Analysis
 
 # Monotonic Relative Neighborhood Graph
 
