@@ -31,7 +31,7 @@ if __name__ == "__main__" :
     visualizer_without_navigating_node = KNNG_Visualizer(KNNG.B)
     G = visualizer_without_navigating_node.create_graph()  # 創建圖
     visualizer_without_navigating_node.draw_graph(G , 'KNNG.png')  # 繪製圖
-    
+
     #bulild NSG Graph
     nsg_Builder = NSG_Builder( knng_Builder = KNNG ,  max_out_degree = 8 , hf_embeddings = hf_embeddings , pool_max =20 )
     nsg_Builder.nsg_build()
@@ -46,7 +46,7 @@ if __name__ == "__main__" :
     # iterate all nodes 
     result_all = retriever.Compare_with_all( "What is NSG ?" , k = k )
     #calculate the recall
-    retriever.recall( KNNG_result = result , truth_result = result_all ,k = k )
+    print(f" recall : {retriever.recall( KNNG_result = result , truth_result = result_all ,k = k )}")
 
     # 如果希望標記導航節點
     visualizer_with_navigating_node = KNNG_Visualizer(nsg_Builder.B, nsg_Builder.navigating_node.id)
